@@ -66,6 +66,7 @@ const game = {
         alert (`your guess is too High. Previous guesses: ${this.prevGuesses.join()}`) 
       } if(this.prevGuesses[this.prevGuesses.length - 1] < parseInt (this.secretNum)) {
         alert (`your guess is to low. Previous guesses: ${this.prevGuesses.join()}`)
+//i can possibly change line 67 "if" into a regular else statement instead as a default
       } 
       }
 // if else statement that is getting the last number the user has guessed
