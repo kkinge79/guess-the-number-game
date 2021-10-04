@@ -8,7 +8,7 @@
 const game = {
   title: 'Guess the Number!',
   prevGuesses: [],
-  biggestNum: 10,
+  biggestNum: 100,
   smallestNum: 1,
   secretNum: null,
 //state of the game 
@@ -49,7 +49,7 @@ const game = {
     
 
     while (currentGuess > this.biggestNum || currentGuess < this.smallestNum || isNaN(currentGuess)) {
-      currentGuess = parseInt ( prompt (`you need to return a number between ${this.smallestNum} and ${this.biggestNum} :). Nice try`), )
+      currentGuess = parseInt ( prompt (`you need to return a number between ${this.smallestNum} and ${this.biggestNum} :). `), )
 //the while loop basically is saying when the users current guess is bigger than 100 or less than 1 or doesnt equal a number then the window will prompt "hey that doesnt follow the rules choose a number between 1 and 100"
     //because of the do while loop above, the window will still appear because it technically is a wrong answer and will keep having the user guess till the users guess= the secret number
 //while loop will execute everytime the condition is true, when the condition is true, the statement will occur
@@ -66,17 +66,13 @@ const game = {
         alert (`your guess is too High. Previous guesses: ${this.prevGuesses.join()}`) 
       } if(this.prevGuesses[this.prevGuesses.length - 1] < parseInt (this.secretNum)) {
         alert (`your guess is to low. Previous guesses: ${this.prevGuesses.join()}`)
-      } else {
-        alert ('idk what happened dude, try again')
+      } 
       }
-      }
+// if else statement that is getting the last number the user has guessed
+//make sure the secret number returns as an interger
+//.join in the prevGuesses bc its grabbing all the users answers and displaying on the window and turns it into a string
 
   }
-//add render method here
-//Render is very similiar to a result
-    //once the methods above play out we will display text on the screen depending what happens
-      //ex. 'YOUVE GUESSED CORRECT'/ or 'try again, these were your previous guesses
-//*need to move the 'wrong answers ${this.prevGuesses} on line 33 possibly to the render
       }
     
 
