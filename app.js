@@ -71,6 +71,8 @@ const game = {
 // if else statement that is getting the last number the user has guessed
 //make sure the secret number returns as an interger
 //.join in the prevGuesses bc its grabbing all the users answers and displaying on the window and turns it into a string
+
+//dont need parse int possible because secretNum should also be an interger already
   }
       }
 game.play()
